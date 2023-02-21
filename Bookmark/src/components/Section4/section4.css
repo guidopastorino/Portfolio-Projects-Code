@@ -1,0 +1,73 @@
+.section-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.section-4 > .accordion {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-4 > .accordion > details {
+  text-align: start;
+  user-select: none;
+  border-top: 1px solid #00000032;
+  width: 100%;
+}
+
+.section-4 > .accordion > details:last-child {
+  border-bottom: 1px solid #00000032;
+}
+
+.section-4 > .accordion > details > summary {
+  text-align: start;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+.section-4 > .accordion > details > summary:hover {
+  background: #00000004;
+}
+
+.section-4 > .accordion > details > summary:hover > span,
+.section-4 > .accordion > details > summary:hover > ion-icon {
+  color: #fc5859;
+}
+
+.section-4 > .accordion > details > summary > span{
+  transition: all .3s;
+}
+
+.section-4 > .accordion > details > summary > ion-icon {
+  font-size: 25px;
+  transition: all .3s;
+  --ionicon-stroke-width: 25px;
+  transition: all 0.2s;
+  color: #4f63d6;
+  flex-shrink: 0;
+}
+
+.section-4 > .accordion > details[open] > summary > ion-icon {
+  transform: rotate(-180deg);
+}
+
+.section-4 > .accordion > details[open] > summary {
+  background: #00000004;
+}
+
+.section-4 > .accordion > details > p {
+  padding: 0 15px 15px;
+  font-size: 14px;
+  background: #00000004;
+}

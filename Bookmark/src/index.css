@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body,
+#root {
+  overflow: hidden auto;
+  font-size: 18px;
+}
+
+button * {
+  pointer-events: none;
+}
+
+main {
+  width: 100%;
+  margin: 100px auto 0;
+}
+
+main > section:not(.section-5) {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 60px 30px;
+}
+
+/* ANCHORS */
+
+.anchor {
+  width: max-content;
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 3px 12px #2222223f;
+  transition: all 0.2s;
+  font-size: 15px;
+}
+
+.blueAnchor {
+  background: #5368df;
+  color: #fff;
+  outline: 2px solid #5368df;
+}
+
+.whiteAnchor {
+  background: #f7f7f7;
+  color: #9194a1;
+  outline: 2px solid #f7f7f7;
+}
+
+.blueAnchor:hover {
+  background: transparent;
+  color: #5368df;
+}
+
+.whiteAnchor:hover {
+  background: transparent;
+  outline: 2px solid #9194a1;
+}
+
+/* red anchor */
+.redAnchor {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 5px;
+  background: #fa5757;
+  color: #fff;
+  outline: 2px solid #fa5757;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+}
+
+.redAnchor:hover {
+  background: #fff;
+  color: #fa5757;
+}
+
+.redAnchor--email {
+  height: 50px;
+  border: 2px solid #fa5757;
+  outline: none;
+}
+
+/*  */
+section > h2,
+section > p {
+  text-align: center;
+}
+
+section > p {
+  text-align: center;
+  color: #a3a3a3;
+  width: 100%;
+  max-width: 500px;
+}

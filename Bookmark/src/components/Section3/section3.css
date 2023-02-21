@@ -1,0 +1,99 @@
+.section-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.navigators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.navigator {
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 12px #22222226;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.navigators > .navigator:nth-child(2) {
+  top: 40px;
+}
+
+.navigators > .navigator:nth-child(3) {
+  top: 80px;
+}
+
+.navigator:hover {
+  box-shadow: 0 5px 16px #2222224a;
+}
+
+.navigator > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navigator > div:first-child > img {
+  width: 100%;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.navigator > div:first-child > span:nth-child(2) {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.navigator > div:first-child > span:nth-child(3) {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.navigator > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navigator > div:last-child > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.navigator > div:last-child > a{
+  width: 100%;
+}
+
+@media screen and (max-width: 768px){
+  .navigators {
+    flex-direction: column;
+  }
+
+  .navigators > .navigator:nth-child(2) {
+    top: 0;
+  }
+  
+  .navigators > .navigator:nth-child(3) {
+    top: 0;
+  }
+}

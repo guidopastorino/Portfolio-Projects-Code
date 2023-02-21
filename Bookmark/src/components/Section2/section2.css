@@ -1,0 +1,129 @@
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-2 > .section-2__tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  max-width: max-content;
+}
+
+.section-2 > .section-2__tabs > div {
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s;
+  opacity: 0.6;
+  cursor: pointer;
+  position: relative;
+}
+
+.section-2 > .section-2__tabs > div:hover {
+  opacity: 1;
+}
+
+.section-2 > .section-2__tabs > div.activeTab {
+  opacity: 1;
+}
+
+.section-2 > .section-2__tabs > div.activeTab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+  background: #fc5859;
+}
+
+/* tab content */
+.section-2__tabsContent {
+  padding: 180px 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-2__tabsContent > .tab__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section-2__tabsContent > .tab__image > img {
+  position: absolute;
+  width: 90%;
+  top: 30%;
+  transform: translateY(-50%);
+  right: 40px;
+  object-fit: contain;
+  z-index: 50;
+}
+
+.section-2__tabsContent > .tab__image > div {
+  position: absolute;
+  width: 1000%;
+  left: -930%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4f63d6;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  z-index: 20;
+  height: 350px;
+}
+
+/*  */
+
+.section-2__tabsContent > .tab__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-2__tabsContent > .tab__txt > p {
+  color: #a3a3a3;
+  max-width: 500px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .section-2 > .section-2__tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .section-2__tabsContent {
+    gap: 200px;
+    grid-template-columns: 1fr;
+  }
+
+  .section-2__tabsContent > .tab__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 2;
+    text-align: center;
+  }
+
+  .section-2__tabsContent > .tab__image {
+    height: 150px;
+  }
+
+  .section-2__tabsContent > .tab__txt > a {
+    display: none;
+  }
+
+  .section-2__tabsContent > .tab__image > img {
+    width: 80%;
+    right: auto;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}

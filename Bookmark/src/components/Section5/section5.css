@@ -1,0 +1,127 @@
+.section-5{
+    background: #5266df;
+    width: 100%;
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.section-5 > span:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.section-5 > span:nth-child(2){
+    font-size: 40px;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 2px;
+    max-width: 600px;
+}
+
+.section-5 > form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.section-5 > form > div {
+    width: 300px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}
+
+.section-5 > form > div > div{
+    width: 100%;
+    position: relative;
+}
+
+.section-5 > form > div > div img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 20px;
+    object-fit: contain;
+    display: none;
+}
+
+.section-5 > form > div.invalidEmail img{
+    display: block;
+}
+
+.section-5 > form input{
+    width: 100%;
+    flex-shrink: 0;
+    padding: 10px;
+    font-size: 16px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.section-5 > form span{
+    background: #fa5757;
+    color: #fff;
+    font-weight: 400;
+    padding: 10px;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: start;
+    font-size: 14px;
+    font-style: italic;
+    display: none;
+    position: absolute;
+    bottom: -37px;
+    left: 0;
+    width: 100%;
+}
+
+.section-5 > form > div.invalidEmail{
+    background: #fa5757;
+    border-radius: 5px;
+}
+
+.section-5 > form > div.invalidEmail input{
+    border: 2px solid #fa5757;
+}
+
+.section-5 > form > div.invalidEmail span{
+    display: block;
+}
+
+
+@media screen and (max-width: 768px){
+    .section-5 > form{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .section-5 > form > div{
+        width: 100%;
+    }
+
+    .section-5 > form > button {
+        width: 100%;
+    }
+
+    .section-5 > span:nth-child(2){
+        font-size: 6.25vw;
+    }
+
+    .section-5 > form > div > span{
+        position: static;
+    }
+}
