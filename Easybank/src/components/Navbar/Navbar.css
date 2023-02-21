@@ -1,0 +1,152 @@
+header{
+    background: #fff;
+    position: relative;
+    z-index: 1000;
+    padding: 20px;
+    transition: all .2s;
+}
+
+nav{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* logo */
+
+.nav__logo{
+    text-decoration: none;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__logo > img{
+    width: 150px;
+    object-fit: contain;
+}
+
+/* links */
+
+.nav__links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav__links > li > a{
+    transition: all .2s;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--grayish-blue);
+}
+
+.nav__links > li > a::after{
+    transition: all .2s;
+    position: absolute;
+    pointer-events: none;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    content: '';
+    height: 4px;
+    border-radius: 15px;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    opacity: 0;
+}
+
+.nav__links > li > a:hover::after{
+    opacity: 1;
+}
+
+.nav__links > li > a:hover{
+    color: var(--dark-blue);
+}
+
+/* menu btn */
+
+.nav__hamburgerBtn{
+    display: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* menu */
+
+.menuOpen{
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menuClose{
+    transform: translateY(10px);
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--dark-blue), transparent);
+    display: none;
+    justify-content: center;
+    align-items: start;
+    padding: 80px 20px 20px;
+    transition: all .2s;
+    z-index: 900;
+}
+
+.menu > ul{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    overflow: hidden auto;
+    list-style: none;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu > ul > li > a{
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px){
+    .nav__links{
+        display: none;
+    }
+
+    .link-green-gradient--navbar{
+        display: none;
+    }
+
+    .nav__hamburgerBtn{
+        display: block;
+    }
+
+    .menu{
+        display: flex;
+    }
+}

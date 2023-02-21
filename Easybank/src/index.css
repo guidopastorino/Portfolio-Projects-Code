@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+:root {
+  /* Primary */
+  --dark-blue: rgb(45, 49, 77);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  /* Neutral */
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body, #root{
+  background: var(--dark-blue);
+  font-size: 18px;
+  overflow: hidden auto;
+}
+
+button *{
+  pointer-events: none;
+}
+
+/* Link Green Gradient */
+.link-green-gradient{
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  font-weight: 400;
+  transition: all .2s;
+}
+
+.link-green-gradient:hover{
+  opacity: .6;
+}

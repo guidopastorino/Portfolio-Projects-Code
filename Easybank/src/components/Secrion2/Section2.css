@@ -1,0 +1,84 @@
+.section-2 {
+  padding: 100px 20px;
+  background: var(--light-grayish-blue);
+}
+
+.section-2 > div {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.section-2 > div > .section-2__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.section-2 > div > .section-2__txt > span {
+  font-size: 40px;
+  color: var(--dark-blue);
+}
+
+.section-2 > div > .section-2__txt > p {
+  width: 100%;
+  max-width: 600px;
+  color: var(--grayish-blue);
+}
+
+.section-2 > div > .section-2__cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.section-2 > div > .section-2__cards > .card {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: flex-start;
+}
+
+.section-2 > div > .section-2__cards > .card > .card__img > img {
+  object-fit: contain;
+}
+
+.section-2 > div > .section-2__cards > .card > .card__title {
+  font-size: 25px;
+  color: var(--dark-blue);
+}
+
+.section-2 > div > .section-2__cards > .card > .card__description {
+  line-height: 30px;
+  color: var(--grayish-blue);
+}
+
+@media screen and (max-width: 950px) {
+  .section-2 > div > .section-2__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /**/
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section-2 > div > .section-2__txt {
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-2 > div > .section-2__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-2 > div > .section-2__cards > .card {
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,98 @@
+footer{
+    background: var(--dark-blue);
+    padding: 50px 20px;
+}
+
+footer > div{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer > div > .footer__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+footer > div > .footer__left > .footer__media{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div > .footer__left > .footer__media > ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div > .footer__left > .footer__links{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div > .footer__left > .footer__links a{
+    text-decoration: none;
+    color: var(--very-light-gray);
+    font-weight: 300;
+    font-size: 15px;
+    transition: all .2s;
+}
+
+footer > div > .footer__left > .footer__links a:hover{
+    color: var(--lime-green);
+}
+
+footer > div > .footer__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 30px;
+}
+
+footer > div > .footer__right > span{
+    color: var(--grayish-blue);
+    font-weight: 300;
+    text-align: center;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 950px){
+    footer > div{
+        gap: 30px; /**/
+        flex-direction: column; /**/
+    }
+    
+    footer > div > .footer__left{
+        gap: 30px; /**/
+        flex-direction: column; /**/
+    }
+    
+    footer > div > .footer__left > .footer__media{
+        gap: 30px; /**/
+    }
+    
+    footer > div > .footer__left > .footer__links{
+        grid-template-columns: 1fr; /**/
+        text-align: center; /**/
+    }
+    
+    footer > div > .footer__right{
+        align-items: center; /**/
+    }
+}
