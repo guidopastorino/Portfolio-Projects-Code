@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  transition: all 0.3s;
+  background: #fff;
+}
+
+button * {
+  pointer-events: none;
+}
+
+input::-webkit-search-cancel-button {
+  appearance: none;
+  content: url(https://openclipart.org/image/800px/311612);
+  width: 17px;
+  height: 17px;
+  padding: 5px;
+  right: 2px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+input::-webkit-search-cancel-button:hover {
+  background: #00000017;
+}
+
+.unactiveLink > div > *:first-child {
+  display: block;
+}
+
+.activeLink > div > *:first-child {
+  display: none;
+}
+
+.unactiveLink > div > *:last-child {
+  display: none;
+}
+
+.activeLink > div > *:last-child {
+  display: block;
+}
+
+/* scrollbars */
+aside::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 13px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #585858;
+  border: 3px solid #fff;
+}
+
+aside::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #fff;
+  border: 3px solid #fff;
+}
+
+aside:hover::-webkit-scrollbar-thumb {
+  background: #585858;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+/* video poster image */
+.video-thumbnail-container {
+  position: relative;
+  overflow: hidden;
+  /* padding-bottom: 56.25%; 16:9 aspect ratio  */
+  padding-bottom: 57%;
+}
+
+.video-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scrollShorts:hover > button{
+  display: flex;
+}
